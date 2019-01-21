@@ -1,3 +1,5 @@
-body {
+html, body {
   background-color: mediumturquoise;
+  margin: 0;
+  padding: 0;
 }

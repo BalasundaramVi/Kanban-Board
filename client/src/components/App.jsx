@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Header from './Header';
+
 import '../styles/App';
 
 class App extends React.Component {
@@ -14,7 +16,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="application">
-        <h1>HELLO WORLD</h1>
+        <Header />
+        <div>
+          <h1>BOARD</h1>
+        </div>
       </div>
     );
   }
