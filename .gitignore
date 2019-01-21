@@ -1,2 +1,5 @@
 #node modules
 node_modules
+
+#webpack bundle
+client/public/pack_project_bundle.js
