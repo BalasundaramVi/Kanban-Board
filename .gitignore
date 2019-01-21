@@ -3,3 +3,6 @@ node_modules
 
 #webpack bundle
 client/public/pack_project_bundle.js
+
+#ignore png files created from loader
+client/public/*.png

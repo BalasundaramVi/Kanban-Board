@@ -1,9 +1,21 @@
-body {
-  margin: 0;
-  padding: 0;
+.header {
+  background-color: navy;
+  box-shadow: 2px 2px 5px white;
+  display: flex;
+  align-content: space-around;
 }
 
 .title {
-  margin-top: 0;
-  background-color: navy;
+  margin: 5px;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.logo-png {
+  height: 65px;
+  width: 65px;
+  margin: 5px;
+  padding: 5px;
 }
