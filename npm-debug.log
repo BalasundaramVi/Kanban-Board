@@ -1,11 +1,12 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/home/vigneshb/.nvm/versions/node/v6.13.1/bin/node',
 1 verbose cli   '/home/vigneshb/.nvm/versions/node/v6.13.1/bin/npm',
-1 verbose cli   'start' ]
+1 verbose cli   'run',
+1 verbose cli   'build' ]
 2 info using npm@3.10.10
 3 info using node@v6.13.1
 4 verbose stack Error: Failed to parse json
-4 verbose stack Trailing comma in object at 10:3
+4 verbose stack Trailing comma in object at 34:3
 4 verbose stack   },
 4 verbose stack   ^
 4 verbose stack     at parseError (/home/vigneshb/.nvm/versions/node/v6.13.1/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
@@ -16,13 +17,13 @@
 4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:444:12)
 5 verbose cwd /home/vigneshb/Documents/CS/JavaScript/Pack Project
 6 error Linux 4.15.0-43-generic
-7 error argv "/home/vigneshb/.nvm/versions/node/v6.13.1/bin/node" "/home/vigneshb/.nvm/versions/node/v6.13.1/bin/npm" "start"
+7 error argv "/home/vigneshb/.nvm/versions/node/v6.13.1/bin/node" "/home/vigneshb/.nvm/versions/node/v6.13.1/bin/npm" "run" "build"
 8 error node v6.13.1
 9 error npm  v3.10.10
 10 error file /home/vigneshb/Documents/CS/JavaScript/Pack Project/package.json
 11 error code EJSONPARSE
 12 error Failed to parse json
-12 error Trailing comma in object at 10:3
+12 error Trailing comma in object at 34:3
 12 error   },
 12 error   ^
 13 error File: /home/vigneshb/Documents/CS/JavaScript/Pack Project/package.json
