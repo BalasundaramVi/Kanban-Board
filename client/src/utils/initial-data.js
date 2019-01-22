@@ -25,7 +25,7 @@ const initialData = {
       id: 'column-3',
       title: 'Long Term',
       tasks: ['task-6', 'task-7', 'task-8', 'task-9'],
-    }
+    },
   },
   columnOrder: ['column-1', 'column-2', 'column-3'],
   taskCount: 9,
