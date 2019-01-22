@@ -1,25 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 import Column from './Column';
+import { onDragEnd } from '../utils/DragDrop';
 
 import '../styles/Board.css';
 
-const Board = ({ columns, columnOrder, tasks, taskCount, columnCount }) => (
-  <div className="board">
-    {columnOrder.map((col, i) => {
-      const colTasks = [];
-      columns[col].tasks.map(task => (
-        colTasks.push(tasks[task])
-      ));
-      return (
-        <div className={`col col_${i}`} key={`${columns[col].id}`}>
-          <h3 className="col-title">{columns[col].title}</h3>
-          <Column index={i} tasks={colTasks} taskCount={taskCount} />
-        </div>
-      );
-    })}
-  </div>
+const Board = ({
+  columns,
+  columnOrder,
+  tasks,
+  taskCount,
+  columnCount,
+}) => (
+  <DragDropContext onDragEnd={onDragEnd}>
+    <div className="board">
+      {columnOrder.map((col, i) => {
+        const colTasks = [];
+        columns[col].tasks.map(task => (
+          colTasks.push(tasks[task])
+        ));
+        return (
+          <div className={`col col_${i}`} key={`${columns[col].id}`}>
+            <h3 className="col-title">{columns[col].title}</h3>
+            <Column index={i} id={columns[col].title} tasks={colTasks} taskCount={taskCount} />
+          </div>
+        );
+      })}
+    </div>
+  </DragDropContext>
 );
 
 Board.propTypes = {
