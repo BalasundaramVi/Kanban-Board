@@ -20,14 +20,27 @@ class App extends React.Component {
   }
 
   render() {
-    const { columns, columnOrder } = this.state;
+    const {
+      columns,
+      columnOrder,
+      tasks,
+      taskCount,
+      columnCount,
+    } = this.state;
+
     return (
       <div className="application">
         <Header />
-        <Board columns={columns} columnOrder={columnOrder} />
+        <Board
+          columns={columns}
+          columnOrder={columnOrder}
+          tasks={tasks}
+          taskCount={taskCount}
+          columnCount={columnCount}
+        />
       </div>
     );
   }
-};
+}
 
 export default App;
