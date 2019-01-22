@@ -17,6 +17,24 @@ class App extends React.Component {
       taskCount: initialData.taskCount,
       columnCount: initialData.columnCount,
     };
+
+    this.onDragEnd = this.onDragEnd.bind(this);
+  }
+
+  onDragEnd(result) {
+    if (result.destination === null) {
+      return;
+    }
+    const { columns } = this.state;
+    const start = result.source.droppableId;
+    const startIndex = result.source.index;
+    const end = result.destination.droppableId;
+    const endIndex = result.destination.index;
+
+    const task = result.draggableId;
+    columns[start].tasks.splice(startIndex, 1);
+    columns[end].tasks.splice(endIndex, 0, task);
+    this.setState({ columns });
   }
 
   render() {
@@ -37,6 +55,7 @@ class App extends React.Component {
           tasks={tasks}
           taskCount={taskCount}
           columnCount={columnCount}
+          onDragEnd={this.onDragEnd}
         />
       </div>
     );

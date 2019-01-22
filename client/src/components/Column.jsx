@@ -8,7 +8,7 @@ const Column = ({ index, tasks, taskCount, id }) => (
     {provided => (
       <ol className="column-tasks" ref={provided.innerRef} {...provided.droppableProps}>
         {tasks.map((task, i) => (
-          <Draggable draggableId={task.id} index={i}>
+          <Draggable key={task.id} draggableId={task.id} index={i}>
             {dragProvided => (
               <li className={`task task_${i}`} key={task.id} {...dragProvided.draggableProps} {...dragProvided.dragHandleProps} ref={dragProvided.innerRef}>
                 <p className="task-content">{ task.content }</p>

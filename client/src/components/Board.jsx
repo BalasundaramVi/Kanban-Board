@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 import Column from './Column';
-import { onDragEnd } from '../utils/DragDrop';
 
 import '../styles/Board.css';
 
@@ -13,6 +12,7 @@ const Board = ({
   tasks,
   taskCount,
   columnCount,
+  onDragEnd,
 }) => (
   <DragDropContext onDragEnd={onDragEnd}>
     <div className="board">
@@ -24,7 +24,7 @@ const Board = ({
         return (
           <div className={`col col_${i}`} key={`${columns[col].id}`}>
             <h3 className="col-title">{columns[col].title}</h3>
-            <Column index={i} id={columns[col].title} tasks={colTasks} taskCount={taskCount} />
+            <Column index={i} id={columns[col].id} tasks={colTasks} taskCount={taskCount} />
           </div>
         );
       })}
